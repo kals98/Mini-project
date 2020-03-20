@@ -1,0 +1,220 @@
+
+.flip-card {
+  background-color: transparent;
+  width: 347px;
+  height: 352px;
+  perspective: 1000px;
+  margin-top:40px;
+}
+.card-title {
+  margin-top:10px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #fff;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.bgimg{
+	background-image: url('travel.jpg');
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	width: 100%;
+	height: 650px;
+}
+.bgimgl{
+	background-image: url('travel.jpg');
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	width: 100%;
+	height: 20%;
+}
+
+.hearderset{
+	padding-top: 200px;
+	box-sizing: border-box;
+}
+
+.hearderset h2{
+	font-size:42px;
+}
+
+.hearderset h1{
+	font-size:82px;
+	font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.ourservices{
+	padding: 100px 0px 60px;
+	height: 700px;
+}
+
+.ourservices h1{
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.rowsetting{
+	margin:80px 0px !important;
+}
+
+.imgsetting{
+	border-radius: 50%;
+	height: 100px;
+	width:100px;
+}
+
+.fa-bookmark{
+	margin-top: 25px;
+}
+
+.fa-heart{
+	margin-top: 25px;
+}
+
+.fa-plane{
+	margin-top: 25px;
+}
+
+.rowsetting h2{
+	margin-top: 20px;
+	font-weight: bold;
+	font-size:30px;
+}
+
+.rowsetting p{
+	color: #6c757d!important;
+	padding:10px;
+}
+
+
+.portfolio{
+	height: 1100px;
+	/*width: 100px;*/
+	padding: 100px 0px 50px;
+}
+
+.portfolio h1{
+	font-size:50px;
+	font-weight: bold;
+}
+
+.card{
+	margin-top:40px;
+}
+
+.ourteam{
+	height: 700px;
+	padding: 100px 0px 60px;
+	width: 100%;
+}
+
+.ourteam h1{
+	font-size:50px;
+	font-weight: bold;
+}
+
+.teamsetting{
+	margin-top: 70px !important;
+}
+
+.footer{
+	height: 50px;
+}
+
+.footer h6{
+	line-height: 50px;
+}
+
+
+/*
+
+@media(min-width: 992px){
+
+}
+
+
+@media(min-width: 768px) and(max-width: 991px){
+
+}
+
+
+@media(min-width: 575px) and(max-width: 767px){
+
+}
+
+@media(min-width: 480px) and (max-width: 574px){
+
+}
+
+
+@media(max-width: 479px){
+.hearderset h2{
+	font-size:22px;
+}
+
+.hearderset h1{
+	font-size:42px;
+	font-weight: bold;
+}
+.ourservices{
+	height: 1200px;
+}
+
+.portfolio{
+	height: 2200px;
+}
+
+.ourteam{
+	height: 1400px;
+}
+
+}
+*/

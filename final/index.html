@@ -1,0 +1,219 @@
+<?php 
+	include('functions.php');
+	if (!isLoggedIn()) {
+		$_SESSION['msg'] = "You must log in first";
+		header('location: login1.php');
+	}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boostrap website</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="bgimg">
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+			<div class="container">
+				<a href="" class="navbar-brand text-warning font-weight-bold">TRAVEL TOURISTER</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse text-center" id="collapsenavbar">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-ite dropdown">
+							<div class="dropdown">
+							<a href="" class="nav-link  text-white">TOURS</a>
+							<div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Link 1</a>
+      <a class="dropdown-item" href="#">Link 2</a>
+      <a class="dropdown-item" href="#">Link 3</a>
+    </div>
+						</li>
+						<li class="nav-item">
+							<a href="" class="nav-link text-white">ABOUT US</a>
+						</li>
+
+                        <li class="nav-item">
+							<a href="" class="nav-link text-white">CONTACT US</a>
+						</li>
+
+                         <li class="nav-item">
+							<a href="<?php display_link();?>" class="nav-link text-white">SIGN UP <?php display_name();?></a>
+						</li>
+
+                           <li class="nav-item">
+							<a href="" class="nav-link text-white"></a>
+						</li>
+					</ul>
+				</div>
+
+		</div>
+	</nav>
+	<h3>
+					<?php 
+						echo $_SESSION['success']; 
+						unset($_SESSION['success']);
+					?>
+	</h3>
+	<div class="container text-center text-white hearderset">
+		<h2>WELCOME TO Travel Tourister</h2>
+		<h1>Where Travel Dreams Get Fullfiled!!!</h1>
+		<button class="btn btn-warning text-white btn-lg">SUBSCIRBE</button>
+
+</div>
+	</div>
+   <section class="container ourservices text-center">
+   	<h1>SERVICES</h1>
+   	<p>Extras We Offer</p>
+
+   	<div class="row">
+   		<div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
+   			<div class="imgsetting d-block m-auto bg-warning"><i class="fa fa-bookmark fa-3x text-white"></i></div>
+   			<h2>WISHLIST</h2>
+   			<p>Make a wishlist!</p>
+   		</div>
+   		<div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
+   			<div class="imgsetting d-block m-auto bg-warning"><i class="fa fa-heart fa-3x text-white"></i></div>
+   			<h2>HEART</h2>
+   			<p>Your Feedback is Valued!</p>
+   		</div>
+   		<div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
+   			<div class="imgsetting d-block m-auto bg-warning"><i class="fa fa-plane fa-3x text-white"></i></div>
+   			<h2>TOUR</h2>
+   			<p>Customize Your Own Tours</p>
+   		</div>
+
+   	</div>
+   </section>
+
+<!--//////////////////portfolio///////////////-->
+   <section class="portfolio bg-light">
+   	<div class="container text-center">
+   		<h1>PORTFOLIO</h1>
+   		<p>Select A Destination</p>
+
+   		<div class="row">
+
+   			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+   				<div class="card">
+   					<img src="asia.jpg" class="card-img img-fluid">
+   					<div class="card-body">
+   						<h2 class="card-title">ASIA</h2>
+   						<p class="card-text">India, Vietnam, Cambodia</p>
+   					</div>
+   				</div>
+   			</div>
+   			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+   				<div class="card">
+   					<img src="eu.jpg" class="card-img img-fluid">
+   					<div class="card-body">
+   						<h2 class="card-title">EUROPE</h2>
+   						<p class="card-text">ITALY, FRANCE, UK</p>
+   					</div>
+   				</div>
+   			</div>
+   			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+   				<div class="card">
+   					<img src="am.jpg" class="card-img img-fluid">
+   					<div class="card-body">
+   						<h2 class="card-title">NORTH AMERICA</h2>
+   						<p class="card-text">USA, Canada</p>
+   					</div>
+   				</div>
+   			</div>
+
+   		</div>
+
+   		<div class="row">
+
+   			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+   				<div class="card">
+   					<img src="aus.jpg" class="card-img img-fluid">
+   					<div class="card-body">
+   						<h2 class="card-title">AUSTRALIA</h2>
+   						<p class="card-text">Australia, New Zealand</p>
+   					</div>
+   				</div>
+   			</div>
+   			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+   				<div class="card">
+   					<img src="an.jpg" class="card-img img-fluid">
+   					<div class="card-body">
+   						<h2 class="card-title">ANTARCTICA</h2>
+   						<p class="card-text">Explore the POLE</p>
+   					</div>
+   				</div>
+   			</div>
+   			<div class="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto">
+   				<div class="card">
+   					<img src="sam.jpg" class="card-img img-fluid">
+   					<div class="card-body">
+   						<h2 class="card-title">SOUTH AMERICA</h2>
+   						<p class="card-text">Brazil, Peru, Argentina</p>
+   					</div>
+   				</div>
+   			</div>
+   			   			
+   		</div>
+
+   	</div>
+   </section>
+   <section class="ourteam">
+   	<div class="container text-center">
+   		<h1>OUR AMAZING TEAM</h1>
+   		<p>Happy To Help</p>
+   		<div class="row teamsetting">
+   			<div class="col-lg-4 col-md-4 col-sm-10 col-12 d-block m-auto">
+   		<figure class="figure">
+   			<img src="avatar.jpg" class="figure-img img-fluid rounded-circle" height="250px" width="250px">
+   			<figcaption>
+   				<h4>PRANITA</h4>
+   				<p class="figure-caption">Group member</p>
+   			</figcaption>
+   		</figure>
+   	</div>
+   	<div class="col-lg-4 col-md-4 col-sm-10 col-12 d-block m-auto">
+   		<figure class="figure">
+   			<img src="avatar.jpg" class="figure-img img-fluid rounded-circle" height="250px" width="250px">
+   			<figcaption>
+   				<h4>PRANITA</h4>
+   				<p class="figure-caption">Group member</p>
+   			</figcaption>
+   		</figure>
+   	</div>
+   	<div class="col-lg-4 col-md-4 col-sm-10 col-12 d-block m-auto">
+   		<figure class="figure">
+   			<img src="avatar.jpg" class="figure-img img-fluid rounded-circle" height="250px" width="250px">
+   			<figcaption>
+   				<h4>PRANITA</h4>
+   				<p class="figure-caption">Group member</p>
+   			</figcaption>
+   		</figure>
+   	</div>
+   </div>
+
+   	</div>
+   </section>
+   <footer class="footer">
+   	<h6 class="text-center">Copyright @2019 Design by TravelTourister</h6>
+   </footer>
+
+
+</body>
+</html>
